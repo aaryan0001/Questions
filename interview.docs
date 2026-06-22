@@ -1,0 +1,102 @@
+Basic introduction of yourself.
+Explain breifly about your projects
+what is dsa
+how many types of data structure are there give description of all
+difference between tree and graph
+difference between linked list and doubly link list
+difference between programming and object oriented programming
+what is time and space complexity
+what is opps explain all pillars of opps with real time example
+explain one of the projects that you mentioned in your resume
+Code for swappin two number without using third variable
+class FirstClass{
+    public static void main(String args[]){
+       int a=10,b=20;
+       a=a+b;
+       b=a-b;
+       a=a-b;
+       System.out.println("The swapped values are ="+  a + " "+ b);
+    }
+}
+you had given a matrix in form of m*n you need to find out the spiral matrix of that
+import java.util.*;
+public class spiral {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int number[][]=new int [n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                number[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("The spiral matrix is: ");
+        int rowstart=0;
+        int rowend=n-1;
+        int colstart=0;
+        int colend=m-1;
+        while (rowstart<=rowend && colstart<=colend) {
+            for(int j=colstart;j<=colend;j++){
+                System.out.print(number[rowstart][j]+" ");
+            }
+            rowstart++;
+            for(int i=rowstart;i<=rowend;i++){
+                System.out.print(number[i][colend]+" ");
+            }
+            colend--;
+            if(rowstart<=rowend){
+            for(int j=colend;j>=colstart;j--){
+                System.out.print(number[rowend][j]+ " ");
+            }
+            rowend--;
+        }
+            if(colstart<=colend){
+            for(int i=rowend;i>=rowstart;i--){
+                System.out.print(number[i][colstart]+" ");
+            }
+            colstart++;
+        }
+            System.out.println();
+            
+        }
+    }
+}
+You have to create a username from the email by deleting the part that comes after ‘@’. Display that username to the user.
+Example : email = Aryan123@gmail.com”; username = “Aryan123”
+import java.util.*;
+public class email {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String email=sc.next();
+        String userName=" ";
+        for(int i=0;i<email.length();i++){
+            if(email.charAt(i)=='@'){
+                break;
+            }
+            else {
+                userName+=email.charAt(i);
+            }
+            }
+            System.out.println(userName);
+        }
+    }
+coin change the question from dynamic programming i am not able to solve that
+You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+
+Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+You may assume that you have an infinite number of each kind of coin.
+
+
+
+Example 1:
+
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+Example 2:
+
+Input: coins = [2], amount = 3
+Output: -1
+
